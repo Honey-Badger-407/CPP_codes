@@ -12,6 +12,7 @@ int main()
     cout<<"3.to convert meter to feets"<<endl;
     cout<<"4.to convert temperature"<<endl;
     cout<<"5. to multiply string of floating numbers"<<endl;
+    cout<<"6. to change string from lower case to uppar case and vise versa"<<endl;
     cout<<"10. to exit"<<endl;
     cin>>a;
     if (a==1)
@@ -34,10 +35,18 @@ int main()
     {
         floatmulti();
     }
+    else if (a==6)
+    {
+    	SmltoCap();
+	}
     else if (a==10)
 	{
 		cout<<"exiting program"<<endl;
 		goto exit;
+	}
+	else 
+	{
+		cout<<"invalid choice try again"<<endl;
 	}
 	goto start;
 	exit:

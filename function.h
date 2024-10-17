@@ -7,5 +7,5 @@ void addint();
 void MtoF();
 void CtoF();
 void floatmulti();
-
+void SmltoCap();
 #endif  // End of the conditional
