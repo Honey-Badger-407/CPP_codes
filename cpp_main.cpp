@@ -1,5 +1,7 @@
+
 #include<iostream>
 #include "function.h"
+
 using namespace std;
 
 int main()
@@ -13,6 +15,7 @@ int main()
     cout<<"4.to convert temperature"<<endl;
     cout<<"5. to multiply string of floating numbers"<<endl;
     cout<<"6. to change string from lower case to uppar case and vise versa"<<endl;
+    cout<<"7. to use calculator"<<endl;
     cout<<"10. to exit"<<endl;
     cin>>a;
     if (a==1)
@@ -39,7 +42,11 @@ int main()
     {
     	SmltoCap();
 	}
-    else if (a==10)
+    else if (a==7)
+    {
+    	calculator();
+	}
+	else if (a==10)
 	{
 		cout<<"exiting program"<<endl;
 		goto exit;

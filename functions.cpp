@@ -1,5 +1,5 @@
-#include<iostream>
 #include<bits/stdc++.h>
+
 using namespace std;
 void greeting()
 {
@@ -26,33 +26,56 @@ void MtoF()
 
 void CtoF()
 {
-    float a,c,f,k;
-    cout << "how would you like to convert"<<endl<<"1.C to F & K"<< endl<<"2.K to C & F"<<endl<<"3.F to C & K";
-    cin>>a;
-    if (a==1)
+	char temp1,temp2;
+    float c,f,k;
+    cout << "enter unit of input value(c,f,k): ";
+    cin>>temp1;
+    cout << "enter unit of output value(c,f,k): ";
+    cin>>temp2; 
+    
+    if (temp1 =='c' and temp2 == 'f')
     {
-        cout<<"enter temperature in celsius"<<endl;
+        cout<<"enter temperature: ";
+        cin>>c;
+        f=(c*1.8)+32;
+        cout << " temp in F is "<<f<<endl;
+    }
+    else if (temp1 =='c' and temp2 == 'k')
+    {
+        cout<<"enter temperature: ";
         cin>>c;
         k=c+273.15;
-        f=(c*1.8)+32;
-        cout << "temp in k is "<<k<<" and temp in F is "<<f<<endl;
+        cout << " temp in K is "<<k<<endl;
     }
-    else if(a==2)
+    else if (temp1 =='f' and temp2 == 'c')
     {
-        cout<<"enter temperature in kelvin"<<endl;
-        cin>>k;
-        c=k-273.15;
-        f=((c*9)/5)+32;
-        cout << "temp in c is "<<c<<" and temp in F is "<<f<<endl;
+        cout<<"enter temperature: ";
+        cin>>f;
+        c=((f-32)*5)/9;
+        cout << " temp in C is "<<c<<endl;
     }
-    else if(a==3)
+    else if (temp1 =='f' and temp2 == 'k')
     {
-        cout<<"enter temperature in fahrenheit"<<endl;
+        cout<<"enter temperature: ";
         cin>>f;
         c=((f-32)*5)/9;
         k=c+273.15;
-        cout << "temp in k is "<<k<<" and temp in c is "<<c<<endl;
-    
+        cout << " temp in K is "<<k<<endl;
+    }
+    else if (temp1 =='k' and temp2 == 'c')
+    {
+        cout<<"enter temperature: ";
+        cin>>k;
+        c=k-273.15;
+        cout << " temp in C is "<<c<<endl;
+    }
+    else if (temp1 =='k' and temp2 == 'f')
+    {
+        cout<<"enter temperature: ";
+        cin>>k;
+        c=k-273.15;
+        f=(c*1.8)+32;
+        cout << " temp in F is "<<f<<endl;
     }
     else 
     {
@@ -111,5 +134,38 @@ void SmltoCap()
   
 }
 
-
-
+void calculator()
+{
+	float in1,in2,out;
+	char op;
+	string equation;
+	cout << "Enter an expression (e.g., 2.5 + 3.7): ";
+	getline(cin, equation);
+	stringstream ss(equation);
+	ss>>in1>>op>>in2;
+	
+	out=0;
+	switch(op)
+	{
+		case '+':
+			out = in1 + in2;
+			break;
+		case '-':
+			out = in1 - in2;
+			break;
+		case '*':
+			out = in1 * in2;
+			break;
+		case '/':
+			
+			if (in2 != 0)
+				out = in1 / in2;
+			
+			else
+			{
+				cout<<"diviser can not be 0";
+				break;
+			}
+	}
+	cout<<"result is: "<<out;
+}
