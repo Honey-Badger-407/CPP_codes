@@ -8,5 +8,6 @@ void MtoF();
 void CtoF();
 void floatmulti();
 void SmltoCap();
-void calculator()
+void calculator();
+void trim
 #endif  // End of the conditional

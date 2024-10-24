@@ -169,3 +169,16 @@ void calculator()
 	}
 	cout<<"result is: "<<out;
 }
+
+
+void trim()
+{
+	string str1 ;
+	int a,b;
+	cout<<"enter your string"<<endl;
+	getline(cin,str1);
+	cout<<"enter the starting index and no. of elment you want to remove"<<endl;
+	cin>>a>>b;
+	str1.erase(a,b);
+	cout<<"the resultant string is: "<<str1;
+}

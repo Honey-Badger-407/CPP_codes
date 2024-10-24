@@ -16,7 +16,9 @@ int main()
     cout<<"5. to multiply string of floating numbers"<<endl;
     cout<<"6. to change string from lower case to uppar case and vise versa"<<endl;
     cout<<"7. to use calculator"<<endl;
-    cout<<"10. to exit"<<endl;
+    cout<<"8. to trim a string"<<endl;
+    cout<<"9. to sort an array of numbers"<<endl;
+	cout<<"10. to exit"<<endl;
     cin>>a;
     if (a==1)
     {
@@ -45,6 +47,10 @@ int main()
     else if (a==7)
     {
     	calculator();
+	}
+	else if (a==8)
+	{
+		trim();
 	}
 	else if (a==10)
 	{

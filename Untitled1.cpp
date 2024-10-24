@@ -1,41 +1,70 @@
 #include<bits/stdc++.h>
 using namespace std;
-void calculator()
+void sort()
 {
-	float in1,in2,out;
-	char op;
-	string equation;
-	cout << "Enter an expression (e.g., 2.5 + 3.7): ";
-	getline(cin, equation);
-	stringstream ss(equation);
-	ss>>in1>>op>>in2;
+	int i,a,n,j;
+	cout<<"enter length of array"<<endl;
+	cin>>n;
 	
-	out=0;
-	switch(op)
+	int arr[n];
+	
+	cout <<"enter the array (e.g. 2 3 5 1 8 6 ...)"<< endl;
+	for (i=0;i<=n-1;i++)
 	{
-		case '+':
-			out = in1 + in2;
-			break;
-		case '-':
-			out = in1 - in2;
-			break;
-		case '*':
-			out = in1 * in2;
-			break;
-		case '/':
-			
-			if (in2 != 0)
-				out = in1 / in2;
-			
-			else
+		cin>>arr[i];
+	}
+		for (i=0;i<=n-1;i++)
+	{
+		cout<<arr[i]<<endl;
+	}
+	cout<<"which sorting method you want to use";
+	cin>>a;
+	
+	switch (a)
+	{
+	
+		case 1:
+		{
+			//bubble sort
+			for (i=0;i<=n-1;i++)
 			{
-				cout<<"diviser can not be 0";
-				break;
+				for(int j=0;j<=n-i-1;j++)
+				{
+					if (arr[j]>arr[j+1])
+					{
+						swap(arr[j],arr[j+1]);
+					}
+				}
+			}
+		}
+		case 2:
+		{
+			//selection sort
+			for(i=0;i<=n-1;i++)
+			{
+				for(j=i+1;j<=n-1;j++)
+				{
+					if (arr[i]>arr[j])
+					{
+						swap(arr[i],arr[j]);		
+					}
+				}
+			}
+		}
+		case 3:
+			{
+				for(i=0;i<=n-1;i++)
+				{
+					
+				}
 			}
 	}
-	cout<<"result is: "<<out;
+	for (i=0;i<=n-1;i++)
+	{
+		cout<<arr[i]<<endl;
+	}
 }
 int main()
 {
-    calculator();
+    sort();
 }
